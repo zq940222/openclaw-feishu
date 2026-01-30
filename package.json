@@ -1,5 +1,5 @@
 {
-  "name": "@zq940222/openclaw-feishu",
+  "name": "@zenas940222/openclaw-feishu",
   "version": "0.1.6",
   "type": "module",
   "description": "Openclaw Feishu/Lark channel plugin",
@@ -39,7 +39,7 @@
       "order": 70
     },
     "install": {
-      "npmSpec": "@zq940222/openclaw-feishu",
+      "npmSpec": "@zenas940222/openclaw-feishu",
       "localPath": ".",
       "defaultChoice": "npm"
     }
