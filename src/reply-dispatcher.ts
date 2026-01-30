@@ -2,10 +2,10 @@ import {
   createReplyPrefixContext,
   createTypingCallbacks,
   logTypingFailure,
-  type ClawdbotConfig,
+  type OpenclawConfig,
   type RuntimeEnv,
   type ReplyPayload,
-} from "clawdbot/plugin-sdk";
+} from "openclaw/plugin-sdk";
 import { getFeishuRuntime } from "./runtime.js";
 import { sendMessageFeishu, sendMarkdownCardFeishu } from "./send.js";
 import type { FeishuConfig } from "./types.js";
@@ -28,7 +28,7 @@ function shouldUseCard(text: string): boolean {
 }
 
 export type CreateFeishuReplyDispatcherParams = {
-  cfg: ClawdbotConfig;
+  cfg: OpenclawConfig;
   agentId: string;
   runtime: RuntimeEnv;
   chatId: string;

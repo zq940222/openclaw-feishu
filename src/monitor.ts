@@ -1,5 +1,5 @@
 import * as Lark from "@larksuiteoapi/node-sdk";
-import type { ClawdbotConfig, RuntimeEnv, HistoryEntry } from "clawdbot/plugin-sdk";
+import type { OpenclawConfig, RuntimeEnv, HistoryEntry } from "openclaw/plugin-sdk";
 import type { FeishuConfig } from "./types.js";
 import { createFeishuWSClient, createEventDispatcher } from "./client.js";
 import { resolveFeishuCredentials } from "./accounts.js";
@@ -7,7 +7,7 @@ import { handleFeishuMessage, type FeishuMessageEvent, type FeishuBotAddedEvent 
 import { probeFeishu } from "./probe.js";
 
 export type MonitorFeishuOpts = {
-  config?: ClawdbotConfig;
+  config?: OpenclawConfig;
   runtime?: RuntimeEnv;
   abortSignal?: AbortSignal;
   accountId?: string;
@@ -55,7 +55,7 @@ export async function monitorFeishuProvider(opts: MonitorFeishuOpts = {}): Promi
 }
 
 async function monitorWebSocket(params: {
-  cfg: ClawdbotConfig;
+  cfg: OpenclawConfig;
   feishuCfg: FeishuConfig;
   runtime?: RuntimeEnv;
   abortSignal?: AbortSignal;
